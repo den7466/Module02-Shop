@@ -1,0 +1,18 @@
+$bg: rgb(0, 255, 174);
+$color: #2025be;
+
+.box {
+    background-color: $bg;
+    &__title {
+        color: $color;
+    }
+    &__image {
+        width: 200px;
+    }
+    &__svg {
+        fill: red;
+        &:hover {
+            fill: blue;
+        }
+    }
+}
