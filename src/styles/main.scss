@@ -48,8 +48,8 @@ body {
     }
     &__cart {
         display: block;
-        width: 3.8rem;
-        height: 3.8rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 100%;
         border: 1px solid $orange;
         background-color: $orange;
@@ -59,6 +59,7 @@ body {
         background-position: center center;
         background-size: 1.7rem 1.5rem;
         position: relative;
+        padding: 0;
         &:hover {
             background-color: $green;
             border: 1px solid $green;
@@ -77,8 +78,8 @@ body {
     display: block;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 12.3rem;
+    background-size: contain;
+    width: 12rem;
     height: 3.2rem;
 }
 
@@ -97,6 +98,7 @@ body {
     position: relative;
     padding-bottom: 187px;
     overflow-x: hidden;
+    z-index: 0;
     &__item {
         max-width: 378px;
         margin-top: 6rem;
@@ -112,8 +114,8 @@ body {
         gap: 30px;
     }
     &__cover {
-        flex-basis: 763px;
-        height: 763px;
+        flex-basis: 758px;
+        height: 758px;
         border: 1px solid rgba($green, .4);
         border-radius: 100%;
         display: flex;
@@ -123,8 +125,8 @@ body {
         position: relative;
     }
     &__line {
-        width: 658px;
-        height: 658px;
+        width: 656px;
+        height: 656px;
         border: 1px solid rgba($green, .4);
         border-radius: 100%;
         display: flex;
@@ -136,6 +138,9 @@ body {
         width: 92%;
         border-radius: 100%;
         box-shadow: 45px 47px 70px -40px $green;
+    }
+    &__text {
+        padding-top: 4rem;
     }
     &__btn {
         border: none;
@@ -193,30 +198,35 @@ body {
         position: absolute;
         bottom: 122px;
         right: 107px;
+        z-index: -1;
     }
     &__avocado {
         width: 178px;
         position: absolute;
         top: 46px;
         right: -14px;
+        z-index: -1;
     }
     &__beans {
         width: 105px;
         position: absolute;
         bottom: 168px;
         left: 0;
+        z-index: -1;
     }
     &__cucumber {
         width: 85px;
         position: absolute;
         top: 0;
         left: 690px;
+        z-index: -1;
     }
     &__pepper {
         width: 86px;
         position: absolute;
         top: 397px;
         left: 38px;
+        z-index: -1;
     }
 }
 
@@ -237,22 +247,67 @@ body {
 
 .description {
     margin: 0;
+    line-height: 1.5;
     &_size-s {
         font-size: 1.8rem;
+    }
+    &_size-m {
+        font-size: 2.4rem;
     }
 }
 
 .link {
     color: $white;
+    letter-spacing: .13rem;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 2.5rem 4.2rem;
+    padding: 2.4rem 4.3rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
-    border-radius: 3.2rem;
+    border-radius: 3.8rem;
     display: inline-block;
     transition: .2s ease background-color;
     &:hover {
         background-color: #bf601f;
+    }
+}
+
+.offer {
+    background-image: url(../images/offer.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    padding-top: 2rem;
+    padding-bottom: 200px;
+    &__text {
+        margin-top: 6rem;
+        max-width: 700px;
+    }
+    &__slider {
+        overflow: hidden;
+        padding-top: 100px;
+    }
+}
+
+.swiper {
+    overflow: initial;
+    &-slide {
+        border: 1px solid $green;
+    }
+    &-pagination {
+        display: none;
+    }
+    &-button-next, &-button-prev {
+        top: -60px;
+        width: 10px;
+        height: 18px;
+        &::after {
+            color: $green;
+            font-size: 1.8rem;
+        }
+    }
+    &-button-prev {
+        left: initial;
+        right: 84px;
     }
 }
