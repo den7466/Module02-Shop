@@ -81,6 +81,11 @@ body {
     background-size: contain;
     width: 12rem;
     height: 3.2rem;
+    &_footer {
+        width: 18.2rem;
+        height: 4.8rem;
+        flex-basis: 22%;
+    }
 }
 
 .container {
@@ -816,5 +821,108 @@ body {
         color: rgba($green, .6);
         text-decoration: none;
         border-bottom: 1px solid #ecedec;
+    }
+}
+
+.footer-hr {
+    display: block;
+    border: none;
+    height: 1px;
+    background-image: url(../images/hr.png);
+    margin: 0;
+}
+
+.footer {
+    background-image: url(../images/footer.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8rem;
+    }
+    &__list {
+        font-size: 1.8rem;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__item {
+        margin-bottom: 2.5rem;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+    }
+    &__tel, &__mail {
+        color: $green;
+        text-decoration: none;
+    }
+    &__tel {
+        font-size: 2.7rem;
+        margin-bottom: 3rem;
+    }
+    &__mail {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 8rem;
+    }
+    &__copy {
+        opacity: .6;
+    }
+    &__author-text {
+        opacity: .6;
+    }
+    &__author-link {
+        color: $green;
+        text-decoration: none;
+        opacity: .6;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    &__link {
+        width: 48px;
+        height: 48px;
+        display: block;
+        border: 1px solid $green;
+        border-radius: 100%;
+        opacity: .8;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__vk {
+        background-image: url(../images/social/vk.svg);
+        background-size: 23px 24px;
+    }
+    &__inst {
+        background-image: url(../images/social/inst.svg);
+        background-size: 18px 18px;
+    }
+    &__fb {
+        background-image: url(../images/social/fb.svg);
+        background-size: 20px 18px;
     }
 }
