@@ -16,6 +16,10 @@ body {
     color: $green;
     font-size: 1.6rem;
     font-family: $font-jost;
+    background-image: url(../images/bg/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
 }
 
 .header {
@@ -94,9 +98,9 @@ body {
     flex-basis: 12rem;
     height: 3.2rem;
     &_footer {
-        width: 18.2rem;
+        flex-basis: 18rem;
         height: 4.8rem;
-        flex-basis: 22%;
+        margin-top: .8rem;
     }
 }
 
@@ -108,10 +112,6 @@ body {
 }
 
 .main {
-    background-image: url(../images/bg/main-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
     position: relative;
     padding-bottom: 187px;
     overflow-x: hidden;
@@ -299,10 +299,6 @@ body {
 }
 
 .offer {
-    background-image: url(../images/bg/offer-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
     padding-top: 2rem;
     &__text {
         margin-top: 6rem;
@@ -511,10 +507,6 @@ body {
 }
 
 .about {
-    background-image: url(../images/bg/about-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
     padding-top: 180px;
     &-box {
         display: flex;
@@ -577,10 +569,6 @@ body {
 }
 
 .trends {
-    background-image: url(../images/bg/trends-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
     padding-top: 180px;
     &__text {
         margin-top: 4rem;
@@ -588,10 +576,6 @@ body {
 }
 
 .catalog {
-    background-image: url(../images/bg/catalog-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
     padding-top: 180px;
     &__list {
         margin-top: 8.5rem;
@@ -708,10 +692,6 @@ body {
 }
 
 .delivery {
-    background-image: url(../images/bg/delivery-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
     padding-top: 180px;
     &-box {
         display: flex;
@@ -885,6 +865,10 @@ body {
     }
 }
 
+footer {
+    padding-bottom: 8rem;
+}
+
 .footer-hr {
     display: block;
     border: none;
@@ -894,24 +878,27 @@ body {
 }
 
 .footer {
-    background-image: url(../images/bg/footer-bg.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
-    padding-bottom: 8rem;
     &__box {
         display: flex;
         justify-content: space-between;
         margin-top: 8rem;
+        font-size: 1.8rem;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 66.5%;
     }
     &__list {
-        font-size: 1.8rem;
         list-style: none;
         padding-left: 0;
         margin: 0;
     }
     &__item {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.6rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     &__link {
         color: $green;
@@ -925,41 +912,24 @@ body {
         display: flex;
         flex-direction: column;
     }
-    &__tel, &__mail {
-        color: $green;
-        text-decoration: none;
-        transition: .2s;
-        &:hover {
-            color: $orange;
-        }
-    }
     &__tel {
         font-size: 2.7rem;
+        display: block;
         margin-bottom: 3rem;
     }
-    &__mail {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
     &__text {
+        color: rgba($green, .6);
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-top: 3rem;
+        font-size: 1.6rem;
+        margin-top: 4rem;
     }
-    &__copy {
-        opacity: .6;
-    }
-    &__author-text {
-        opacity: .6;
-    }
-    &__author-link {
-        color: $green;
+    &__author {
+        color: rgba($green, .6);
         text-decoration: none;
-        opacity: .6;
         transition: .2s;
         &:hover {
-            opacity: 1;
+            color: rgba($green, 1);
         }
     }
 }
@@ -970,15 +940,17 @@ body {
     align-items: center;
     list-style: none;
     padding-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
     &__link {
-        width: 48px;
-        height: 48px;
+        width: 4.6rem;
+        height: 4.6rem;
         display: block;
-        border: 1px solid $green;
+        border: 2px solid $green;
         border-radius: 100%;
         opacity: .8;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
         transition: .2s;
         &:hover {
             opacity: 1;
@@ -986,15 +958,15 @@ body {
     }
     &__vk {
         background-image: url(../images/social/vk.svg);
-        background-size: 23px 24px;
+        background-size: 2.3rem;
     }
     &__inst {
         background-image: url(../images/social/inst.svg);
-        background-size: 18px 18px;
+        background-size: 1.8rem;
     }
     &__fb {
         background-image: url(../images/social/fb.svg);
-        background-size: 20px 18px;
+        background-size: 1.8rem;
     }
 }
 
