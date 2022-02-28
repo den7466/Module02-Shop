@@ -8,6 +8,17 @@ $white: #FFFFFF;
 $font-cormorant: 'Cormorant', serif;
 $font-jost: 'Jost', sans-serif;
 
+$r_minmob: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+
 html {
     font-size: 10px;
 }
@@ -18,7 +29,6 @@ body {
     font-family: $font-jost;
     background-image: url(../images/bg/main-bg.jpg);
     background-repeat: no-repeat;
-    background-position-x: center;
     background-size: cover;
 }
 
@@ -29,10 +39,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 5%;
+    @media (max-width: $r_desk_1280) {
+        gap: 3%;
+    }
     &__nav-box {
         flex-grow: 1;
-        margin-left: 4rem;
+        margin-left: 4.5rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 0;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-grow: 0;
+        }
+        @media (max-width: $r_tab_900) {
+            display: none;
+        }
     }
     &__nav {
         display: flex;
@@ -40,6 +62,9 @@ body {
         margin: 0;
         padding-left: 0;
         gap: 4.8rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 2.5rem;
+        }
     }
     &__link {
         color: $green;
@@ -60,10 +85,36 @@ body {
         &:hover {
             color: $orange;
         }
+        @media (max-width: $r_desk_hd) {
+            display: none;
+        }
+    }
+    &__tel-m, &__menu-m {
+        display: none;
+    }
+    &__tel-m {
+        @media (max-width: $r_desk_hd) {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            border: 1px solid $green;
+            background-color: $white;
+            background-image: url(../images/tel.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.7rem 1.5rem;
+            padding: 0;
+            opacity: .8;
+            transition:.3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
     &__cart {
         display: block;
-        flex-basis: 4rem;
+        width: 4rem;
         height: 4rem;
         border-radius: 100%;
         border: 1px solid $orange;
@@ -76,9 +127,19 @@ body {
         position: relative;
         padding: 0;
         transition:.3s;
+        @media (max-width: $r_desk_hd) {
+            background-image: url(../images/cart-m.svg);
+            border: 1px solid $green;
+            background-color: $white;
+            opacity: .8;
+        }
         &:hover {
             background-color: $green;
             border: 1px solid $green;
+            @media (max-width: $r_desk_hd) {
+                background-color: $white;
+                opacity: 1;
+            }
         }
     }
     &__counter {
@@ -87,6 +148,37 @@ body {
         position: absolute;
         top: .6rem;
         right: .7rem;
+        @media (max-width: $r_desk_hd) {
+            color: $green;
+        }
+    }
+    &__buttons {
+        @media (max-width: $r_desk_hd) {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    }
+    &__menu-m {
+        @media (max-width: $r_tab_900) {
+            display: block;
+            cursor: pointer;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            border: 1px solid $green;
+            background-color: $white;
+            background-image: url(../images/burger.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.7rem 1.5rem;
+            padding: 0;
+            opacity: .8;
+            transition:.3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }
 
