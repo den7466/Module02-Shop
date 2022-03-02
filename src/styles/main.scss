@@ -756,6 +756,10 @@ body {
         justify-content: space-between;
         align-items: center;
         margin-top: 7rem;
+        @media (max-width: $r_tab) {
+            display: block;
+            margin-top: 4rem;
+        }
     }
     &__text {
         margin-left: 12rem;
@@ -765,6 +769,10 @@ body {
         }
         @media (max-width: $r_desk_1120) {
             margin-left: 4rem;
+            flex-basis: 395px;
+        }
+        @media (max-width: $r_tab) {
+            margin-left: 0;
         }
     }
     &__list {
@@ -777,6 +785,18 @@ body {
         font-weight: 700;
         font-style: italic;
         font-size: 3rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 3rem;
+        }
+        @media (max-width: $r_tab_900) {
+            font-size: 2.4rem;
+            gap: 1.5rem;
+        }
+        @media (max-width: $r_tab) {
+            gap: 4rem;
+            justify-content: center;
+            margin-top: 4rem;
+        }
     }
     &__item {
         display: flex;
@@ -792,26 +812,36 @@ body {
             background-repeat: no-repeat;
             background-position: center center;
             margin-bottom: 1.5rem;
+            @media (max-width: $r_tab_900) {
+                width: 64px;
+                height: 64px;
+            }
         }
         &_icon1 {
             &::before {
                 background-image: url(../images/about-icon-1.svg);
                 background-size: 44px 41px;
-                animation: opacity1 5s ease-in-out 1s infinite;
+                @media (max-width: $r_tab_900) {
+                    background-size: 34px 31px;
+                }
             }
         }
         &_icon2 {
             &::before {
                 background-image: url(../images/about-icon-2.svg);
                 background-size: 40px 40px;
-                animation: opacity2 5s ease-in-out 2s infinite;
+                @media (max-width: $r_tab_900) {
+                    background-size: 30px 30px;
+                }
             }
         }
         &_icon3 {
             &::before {
                 background-image: url(../images/about-icon-3.svg);
                 background-size: 45px 39px;
-                animation: opacity3 5s ease-in-out 3s infinite;
+                @media (max-width: $r_tab_900) {
+                    background-size: 35px 29px;
+                }
             }
         }
     }
@@ -1228,41 +1258,5 @@ footer {
     }
     100% {
         box-shadow: 0 0 0 0 rgba($green, 0);
-    }
-}
-
-@keyframes opacity1 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes opacity2 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes opacity3 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
     }
 }
