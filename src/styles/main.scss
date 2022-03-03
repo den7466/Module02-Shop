@@ -21,6 +21,7 @@ $r_desk_1170: 1170px;
 $r_desk_hd: 1200px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
+$r_desk_1440: 1440px;
 $r_desk_full_1750: 1750px;
 
 html {
@@ -892,6 +893,12 @@ body {
 
 .catalog {
     padding-top: 180px;
+    &__list-box {
+        @media (max-width: $r_tab) {
+            overflow: hidden;
+            max-height: 18.2rem;
+        }
+    }
     &__list {
         margin-top: 8.5rem;
         margin-bottom: 5rem;
@@ -929,7 +936,14 @@ body {
     padding-left: 0;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
+    @media (max-width: $r_tab) {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 4rem;
+    }
     &__item {
         min-width: 230px;
         text-align: center;
@@ -947,6 +961,10 @@ body {
             border: 1px solid $orange;
             color: $orange;
         }
+        &_active {
+            border: 1px solid $orange;
+            color: $orange;
+        }
     }
 }
 
@@ -954,6 +972,12 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    @media (max-width: $r_desk_1440) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $r_desk) {
+        grid-template-columns: repeat(2, 1fr);
+    }
     &__item {
         border: 1px solid rgba($green, .4);
         border-radius: 2rem;
@@ -984,6 +1008,10 @@ body {
         color: $green;
         margin-top: 1.7rem;
         margin-bottom: 0;
+        min-height: 7rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__description {
         font-size: 1.6rem;
@@ -993,16 +1021,25 @@ body {
         min-height: 61px;
         max-width: 300px;
         line-height: 1.5;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__price {
         font-size: 2.4rem;
         margin-top: 0;
         margin-bottom: 3rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $r_tab) {
+            justify-content: center;
+        }
     }
 }
 
