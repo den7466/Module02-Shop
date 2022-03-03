@@ -17,6 +17,7 @@ $r_tab: 768px;
 $r_tab_900: 900px;
 $r_desk: 1000px;
 $r_desk_1120: 1120px;
+$r_desk_1170: 1170px;
 $r_desk_hd: 1200px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
@@ -498,6 +499,8 @@ body {
     transition:.3s;
     @media (max-width: $r_desk_1280) {
         font-size: 1.4rem;
+        padding: 2rem 3.4rem;
+        box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, .15);
     }
     &:hover {
         background-color: $dark-orange;
@@ -539,7 +542,11 @@ body {
         position: relative;
         z-index: 0;
         box-shadow: 0 0 0 2px rgba($green, 0) inset;
+        overflow: hidden;
         transition: .2s;
+        @media (max-width: $r_tab) {
+            height: 580px;
+        }
         &_white {
             height: 520px;
             display: flex;
@@ -547,8 +554,8 @@ body {
             justify-content: flex-end;
             background-size: contain;
             padding: 4rem 3.7rem;
-            @media (max-width: $r_desk_hd){
-                height: 400px;
+            @media (max-width: $r_desk_hd) {
+                height: 450px;
             }
             &:hover {
                 .swiper-slide__hover {
@@ -585,19 +592,32 @@ body {
             font-size: 3rem;
             color: $green;
             margin-bottom: 0;
+            min-height: 7rem;
+            @media (max-width: $r_tab) {
+                text-align: center;
+                margin-top: 0;
+            }
         }
         &__description {
             font-size: 1.8rem;
             color: rgba($green, .7);
-            margin-top: 2rem;
+            margin-top: 1rem;
             margin-bottom: 0;
-            min-height: 55px;
+            min-height: 82px;
             max-width: 300px;
             line-height: 1.5;
+            @media (max-width: $r_tab) {
+                text-align: center;
+                max-width: 100%;
+            }
         }
         &__price {
             font-size: 2.4rem;
+            margin-top: 1rem;
             margin-bottom: 3rem;
+            @media (max-width: $r_tab) {
+                text-align: center;
+            }
         }
         &__hover {
             height: 0;
@@ -641,6 +661,9 @@ body {
             width: 100%;
             height: 322px;
             text-align: center;
+            @media (max-width: $r_tab) {
+                height: 240px;
+            }
         }
         &__image {
             width: 100%;
@@ -652,6 +675,9 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media (max-width: $r_tab) {
+                justify-content: center;
+            }
         }
     }
     &-pagination {
@@ -704,6 +730,9 @@ body {
 
 .counter {
     display: flex;
+    @media (max-width: $r_desk_1170) {
+        display: none;
+    }
     &__btn {
         cursor: pointer;
         width: 50px;
@@ -713,6 +742,10 @@ body {
         padding: 0;
         background-position: center center;
         border-radius: 100%;
+        @media (max-width: $r_desk_1350) {
+            width: 40px;
+            height: 40px;
+        }
         &_min {
             width: 40px;
             height: 40px;
@@ -743,6 +776,9 @@ body {
         width: 46px;
         border: none;
         padding: 0;
+        @media (max-width: $r_desk_1350) {
+            width: 33px;
+        }
         &_min {
             width: 33px;
         }
