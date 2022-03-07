@@ -203,6 +203,9 @@ body {
             width: 18rem;
             height: 4.8rem;
         }
+        @media (max-width: $r_tab) {
+            margin: .8rem auto 4rem;
+        }
     }
 }
 
@@ -218,9 +221,12 @@ body {
 
 .main {
     position: relative;
-    padding-bottom: 187px;
+    padding-bottom: 10rem;
     overflow-x: hidden;
     z-index: 0;
+    @media (max-width: $r_tab) {
+        padding-bottom: 7.5rem;
+    }
     &__item {
         max-width: 378px;
         margin-top: 6rem;
@@ -405,7 +411,7 @@ body {
     &__tomato {
         width: 110px;
         position: absolute;
-        bottom: 122px;
+        bottom: 20px;
         right: 107px;
         z-index: -1;
     }
@@ -519,7 +525,10 @@ body {
 }
 
 .offer {
-    padding-top: 2rem;
+    padding-top: 5rem;
+    @media (max-width: $r_tab) {
+        padding-top: 0;
+    }
     &__text {
         margin-top: 6rem;
         max-width: 700px;
@@ -792,7 +801,10 @@ body {
 }
 
 .about {
-    padding-top: 180px;
+    padding-top: 18rem;
+    @media (max-width: $r_tab) {
+        padding-top: 9rem;
+    }
     &-box {
         display: flex;
         justify-content: space-between;
@@ -890,14 +902,20 @@ body {
 }
 
 .trends {
-    padding-top: 180px;
+    padding-top: 20rem;
+    @media (max-width: $r_tab) {
+        padding-top: 10rem;
+    }
     &__text {
         margin-top: 4rem;
     }
 }
 
 .catalog {
-    padding-top: 180px;
+    padding-top: 20rem;
+    @media (max-width: $r_tab) {
+        padding-top: 10rem;
+    }
     &__list-box {
         @media (max-width: $r_tab) {
             overflow: hidden;
@@ -909,7 +927,7 @@ body {
         margin-bottom: 5rem;
     }
     &__btn {
-        margin: 6.8rem auto 0;
+        margin: 6rem auto 0;
         border: none;
         background-color: transparent;
         text-transform: uppercase;
@@ -1049,7 +1067,10 @@ body {
 }
 
 .delivery {
-    padding-top: 180px;
+    padding-top: 16rem;
+    @media (max-width: $r_tab) {
+        padding-top: 8rem;
+    }
     &-box {
         display: flex;
         font-size: 1.8rem;
@@ -1131,12 +1152,17 @@ body {
 }
 
 .contact {
-    padding-top: 180px;
-    padding-bottom: 180px;
+    padding-top: 20rem;
+    padding-bottom: 16rem;
+    @media (max-width: $r_tab) {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+    }
     &-box {
         display: flex;
         justify-content: space-between;
-        @media (max-width: $r_tab_900) {
+        gap: 3rem;
+        @media (max-width: $r_tab) {
             display: block;
         }
         &__text {
@@ -1144,6 +1170,9 @@ body {
             flex-grow: 1;
             margin-top: 6rem;
             margin-left: 12rem;
+            @media (max-width: $r_tab_900) {
+                margin-left: 0;
+            }
             @media (max-width: $r_tab) {
                 max-width: 100%;
                 margin-left: 0;
@@ -1200,6 +1229,9 @@ body {
     padding: 3.2rem 5.8rem 4rem;
     border-radius: 2rem;
     @media (max-width: $r_tab_900) {
+        padding: 2.2rem 2.8rem 2rem;
+    }
+    @media (max-width: $r_tab) {
         margin-top: 6rem;
     }
     &__title {
@@ -1257,6 +1289,9 @@ body {
 
 footer {
     padding-bottom: 8rem;
+    @media (max-width: $r_tab) {
+        padding-bottom: 4rem;
+    }
 }
 
 .footer-hr {
@@ -1276,6 +1311,9 @@ footer {
         @media (max-width: $r_desk_1120) {
             display: block;
         }
+        @media (max-width: $r_tab) {
+            margin-top: 4rem;
+        }
     }
     &__info {
         display: flex;
@@ -1293,8 +1331,10 @@ footer {
             display: flex;
             justify-content: space-around;
             align-items: center;
+            margin-bottom: 4rem;
             &:nth-child(2) {
                 flex-direction: column;
+                gap: 3rem;
             }
         }
     }
@@ -1304,10 +1344,7 @@ footer {
             margin-bottom: 0;
         }
         @media (max-width: $r_tab) {
-            margin-bottom: 4rem;
-            &:last-child {
-                margin-bottom: 4rem;
-            }
+            margin-bottom: 0;
         }
     }
     &__link {
