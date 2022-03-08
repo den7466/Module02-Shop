@@ -916,12 +916,6 @@ body {
     @media (max-width: $r_tab) {
         padding-top: 10rem;
     }
-    &__list-box {
-        @media (max-width: $r_tab) {
-            overflow: hidden;
-            max-height: 18.2rem;
-        }
-    }
     &__list {
         margin-top: 8.5rem;
         margin-bottom: 5rem;
@@ -962,9 +956,7 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     @media (max-width: $r_tab) {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        justify-content: center;
         padding-bottom: 4rem;
     }
     &__item {
