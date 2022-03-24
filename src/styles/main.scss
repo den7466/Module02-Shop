@@ -1812,6 +1812,8 @@ footer {
         position: absolute;
         top: 20px;
         right: 20px;
+        padding: 0;
+        display: block;
         cursor: pointer;
     }
     &__nav-box {
