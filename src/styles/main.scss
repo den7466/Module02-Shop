@@ -605,6 +605,9 @@ body {
             font-size: 1.25rem;
             padding: 1.8rem 3.9rem;
         }
+        @media (max-width: $r_mob_360) {
+            padding: 1.8rem 3rem;
+        }
     }
 }
 
@@ -1284,6 +1287,7 @@ body {
         @media (max-width: $r_mob_360) {
             font-size: 1.75rem;
             margin-top: .8rem;
+            min-height: 4.4rem;
         }
     }
     &__description {
