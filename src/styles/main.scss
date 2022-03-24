@@ -75,6 +75,9 @@ body {
         @media (max-width: $r_desk_hd) {
             gap: 2.5rem;
         }
+        @media (max-width: $r_tab_900) {
+            flex-direction: column;
+        }
     }
     &__link {
         color: $green;
@@ -236,6 +239,65 @@ body {
             width: 15rem;
             height: 3.8rem;
         }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    margin-top: 43px;
+    gap: 30px;
+    &_footer {
+        margin-top: 3rem;
+        justify-content: space-between;
+        @media (max-width: $r_tab) {
+            justify-content: space-around;
+        }
+        @media (max-width: $r_mob_360) {
+            justify-content: center;
+            gap: 10%;
+            margin-top: 5rem;
+        }
+    }
+    &__link {
+        width: 4.6rem;
+        height: 4.6rem;
+        display: block;
+        border: 2px solid $green;
+        border-radius: 100%;
+        opacity: .8;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .2s;
+        @media (max-width: $r_mob_360) {
+            width: 5.75rem;
+            height: 5.75rem;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &_footer {
+            @media (max-width: $r_mob_360) {
+                width: 5.5rem;
+                height: 5.5rem;
+            }
+        }
+    }
+    &_vk {
+        background-image: url(../images/social/vk.svg);
+        background-size: 2.3rem;
+    }
+    &_inst {
+        background-image: url(../images/social/inst.svg);
+        background-size: 1.8rem;
+    }
+    &_fb {
+        background-image: url(../images/social/fb.svg);
+        background-size: 1.8rem;
     }
 }
 
@@ -1729,51 +1791,32 @@ footer {
     }
 }
 
-.footer-social {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 3rem;
-    margin-bottom: 0;
-    @media (max-width: $r_tab) {
-        justify-content: space-around;
-    }
-    @media (max-width: $r_mob_360) {
-        justify-content: center;
-        gap: 10%;
-        margin-top: 5rem;
-    }
-    &__link {
-        width: 4.6rem;
-        height: 4.6rem;
-        display: block;
-        border: 2px solid $green;
-        border-radius: 100%;
-        opacity: .8;
-        background-repeat: no-repeat;
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    margin: -450px 0 0 0;
+    padding-bottom: 50px;
+    transition: .3s;
+    &__close-btn {
+        background-image: url(../images/close.svg);
+        background-size: 10px 10px;
         background-position: center;
-        transition: .2s;
-        &:hover {
-            opacity: 1;
-        }
-        @media (max-width: $r_mob_360) {
-            width: 5.5rem;
-            height: 5.5rem;
-        }
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border-radius: 100%;
+        border: 2px solid $green;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
     }
-    &__vk {
-        background-image: url(../images/social/vk.svg);
-        background-size: 2.3rem;
-    }
-    &__inst {
-        background-image: url(../images/social/inst.svg);
-        background-size: 1.8rem;
-    }
-    &__fb {
-        background-image: url(../images/social/fb.svg);
-        background-size: 1.8rem;
+    &__nav-box {
+        text-align: center;
+        margin-top: 71px;
     }
 }
 
