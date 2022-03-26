@@ -36,9 +36,19 @@
             <div class="header__buttons">
                 <a href="tel:+79453425555" class="header__tel-m"></a>
                 <button class="header__menu-m" onclick="openMobMenu()"></button>
-                <button class="header__cart">
+                <button class="header__cart" onclick="openPoCart()">
                     <span class="header__counter">0</span>
                 </button>
+                <div class="pop-up-cart" id="pop-up-cart">
+                    <button class="pop-up-cart__close-btn" onclick="closePoCart()"></button>
+                    <div class="pop-up-cart__item">
+                        <img class="pop-up-cart__item__image" src="./images/milk.png" title="Item image">
+                        <div class="pop-up-cart__text-box">
+                            <p class="pop-up-cart__item__title">Вы добавили в корзину</p>
+                            <a class="pop-up-cart__item__description" href="#">Молоко топленое</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <div class="container">
