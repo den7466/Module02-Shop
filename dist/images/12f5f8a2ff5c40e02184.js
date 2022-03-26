@@ -1,1 +1,0 @@
-function openMobMenu(){document.getElementById("mob-menu").style.margin="0"}function closeMobMenu(){document.getElementById("mob-menu").style.margin="-450px 0 0 0"}function openPoCart(){document.getElementById("pop-up-cart").style.opacity="1"}function closePoCart(){document.getElementById("pop-up-cart").style.opacity="0"}

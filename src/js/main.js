@@ -15,3 +15,12 @@ function openPoCart() {
 function closePoCart() {
     document.getElementById("pop-up-cart").style.opacity = "0";
 }
+
+// Pop-up-main
+function openPoMain2() {
+    document.getElementById("main-pop-up-2").style.opacity = "1";
+}
+
+function closePoMain2() {
+    document.getElementById("main-pop-up-2").style.opacity = "0";
+}
